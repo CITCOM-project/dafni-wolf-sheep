@@ -1,0 +1,41 @@
+kind: Model
+apiVersion: v1alpha4
+metadata:
+  displayName: wolf-sheep
+  name: wolf-sheep
+  summary: Agent based predator-prey example.
+  description: >
+    Agent based predator-prey example.
+  type: testing
+spec:
+  inputs:
+    env:
+      - name: initial_sheep
+        title: Initial number of sheep.
+        desc: Initial number of sheep.
+        type: integer
+        default: 100
+        min: 0
+
+      - name: initial_wolves
+        title: Initial number of wolves.
+        desc: Initial number of wolves.
+        type: integer
+        default: 50
+        min: 0
+
+  outputs:
+    datasets:
+      - name: sequence.json
+        type: json
+        desc: A Fibonacci sequence output from the Fibonacci Example Model.
+        # height=20,
+        # width=20,
+        # initial_sheep=100,
+        # initial_wolves=50,
+        # sheep_reproduce=0.04,
+        # wolf_reproduce=0.05,
+        # wolf_gain_from_food=20,
+        # grass=False,
+        # grass_regrowth_time=30,
+        # sheep_gain_from_food=4,
