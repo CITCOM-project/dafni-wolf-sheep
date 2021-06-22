@@ -1,9 +1,19 @@
+import os
 from pathlib import Path
 from wolf_sheep import model
 
 
 # Initialise model
-wsmodel = model.WolfSheep(initial_sheep = 100, initial_wolves = 50, verbose = False)
+# Read values from environment variables but use default values if they don't exist
+default_initial_sheep = 100
+default_initial_wolves = 50
+
+initial_sheep = os.getenv("initial_sheep", default_initial_sheep)
+initial_wolves = os.getenv("initial_wolves", default_initial_wolves)
+
+wsmodel = model.WolfSheep(initial_sheep = initial_sheep, 
+                          initial_wolves = 50, 
+                          verbose = False)
 
 
 # Run model
