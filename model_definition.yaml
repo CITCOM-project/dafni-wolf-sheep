@@ -26,9 +26,9 @@ spec:
 
   outputs:
     datasets:
-      - name: sequence.json
+      - name: wolf_sheep_out.csv
         type: json
-        desc: A Fibonacci sequence output from the Fibonacci Example Model.
+        desc: The number of wolves and sheep at each model step.
         # height=20,
         # width=20,
         # initial_sheep=100,
