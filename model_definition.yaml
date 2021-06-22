@@ -27,7 +27,7 @@ spec:
   outputs:
     datasets:
       - name: wolf_sheep_out.csv
-        type: json
+        type: csv
         desc: The number of wolves and sheep at each model step.
         # height=20,
         # width=20,
