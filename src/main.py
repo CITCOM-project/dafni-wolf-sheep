@@ -12,7 +12,7 @@ initial_sheep = os.getenv("initial_sheep", default_initial_sheep)
 initial_wolves = os.getenv("initial_wolves", default_initial_wolves)
 
 wsmodel = model.WolfSheep(initial_sheep = initial_sheep, 
-                          initial_wolves = 50, 
+                          initial_wolves = initial_wolves, 
                           verbose = False)
 
 
