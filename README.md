@@ -24,3 +24,10 @@ Run the container:
 ```
 docker run dafni-wolf-sheep 
 ```
+
+To upload to DAFNI:
+
+```
+docker build -t dafni-wolf-sheep:to-upload .
+docker save -o dafni-wolf-sheep.tar dafni-wolf-sheep:to-upload
+```
