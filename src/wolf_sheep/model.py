@@ -55,6 +55,7 @@ class WolfSheep(Model):
         grass=False,
         grass_regrowth_time=30,
         sheep_gain_from_food=4,
+        verbose=True,
     ):
         """
         Create a new Wolf-Sheep model with the given parameters.
@@ -69,6 +70,7 @@ class WolfSheep(Model):
             grass_regrowth_time: How long it takes for a grass patch to regrow
                                  once it is eaten
             sheep_gain_from_food: Energy sheep gain from grass, if enabled.
+            verbose: Print output to console during run.
         """
         super().__init__()
         # Set parameters
@@ -91,6 +93,8 @@ class WolfSheep(Model):
                 "Sheep": lambda m: m.schedule.get_breed_count(Sheep),
             }
         )
+
+        self.verbose = verbose
 
         # Create sheep:
         for i in range(self.initial_sheep):
